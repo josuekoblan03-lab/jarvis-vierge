@@ -1,0 +1,10 @@
+# Secrets
+.env
+.env.local
+secrets/api-keys.md
+# Backups auto (hook)
+.backups/
+# Divers
+node_modules/
+.DS_Store
+.playwright-mcp/
