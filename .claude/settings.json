@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      { "matcher": "Bash", "hooks": [{ "type": "command", "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/dangerous-command-blocker.py\"" }] },
+      { "matcher": "Bash", "hooks": [{ "type": "command", "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/secret-scanner.py\"" }] },
+      { "matcher": "Write", "hooks": [{ "type": "command", "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Writing to .env files is blocked by hook\"}}'" }] },
+      { "matcher": "Edit|MultiEdit", "hooks": [{ "type": "command", "command": "if [[ -n \"$CLAUDE_TOOL_FILE_PATH\" && -e \"$CLAUDE_TOOL_FILE_PATH\" ]]; then mkdir -p .backups && cp \"$CLAUDE_TOOL_FILE_PATH\" \".backups/$(basename \"$CLAUDE_TOOL_FILE_PATH\").bak\" 2>/dev/null || true; fi" }] }
+    ],
+    "PostToolUse": [
+      { "matcher": "Edit|MultiEdit", "hooks": [{ "type": "command", "command": "if [[ \"$CLAUDE_TOOL_FILE_PATH\" =~ \\.(js|ts|jsx|tsx)$ ]]; then npx prettier --write \"$CLAUDE_TOOL_FILE_PATH\" 2>/dev/null || true; fi" }] },
+      { "matcher": "Edit|MultiEdit", "hooks": [{ "type": "command", "command": "if [[ \"$CLAUDE_TOOL_FILE_PATH\" == *.py ]]; then black \"$CLAUDE_TOOL_FILE_PATH\" 2>/dev/null || true; fi" }] }
+    ],
+    "Stop": [
+      { "hooks": [{ "type": "command", "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/scope-guard.sh\"" }] }
+    ]
+  }
+}
