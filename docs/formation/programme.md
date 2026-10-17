@@ -56,7 +56,7 @@ Le **Jarvis Vierge** (ce workspace). Installé en séance 1, il contient déjà 
 | # | Titre | Concept clé | Résultat concret |
 |---|---|---|---|
 | S5 | C'est quoi tout ça ? | MCP, agent, skill, plugin, hook, commande (le vocabulaire) | L'apprenant sait ce que chaque brique fait |
-| S6 | Design et UI | skills frontend-design / tailwind, composants | Pages principales stylées |
+| S6 | Design avec Claude Design | maquetter dans Claude Design, puis transposer en code | Page principale maquettée + codée fidèle |
 | S7 | Responsive et accessibilité | mobile, a11y, agent web-accessibility-checker | App utilisable mobile + accessible |
 | S8 | Commandes et skills perso | créer une commande, invoquer une skill | 1 commande perso créée |
 
