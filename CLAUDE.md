@@ -2,10 +2,13 @@
 
 Ce fichier guide Claude Code dans ce workspace. Il est chargé automatiquement au début de chaque session.
 
-> **Première fois ?** Fais ces 3 choses avant de travailler :
-> 1. Remplis `context/CONTEXT.md` (qui tu es, ce que tu fais, tes objectifs).
-> 2. Édite ci-dessous les sections **« Qui je suis »** et **« Comment tu dois m'aider »** avec tes infos et tes préférences.
-> 3. Lance `/prime` pour que Claude charge ton contexte.
+> **Première fois ?** Tu n'as RIEN à taper ni à configurer à la main. Ouvre le dossier dans Claude Code et écris un simple « bonjour » : Claude te pose quelques questions, puis enregistre tout seul ta configuration (ton profil, tes préférences, le suivi git). Aucune commande git ou env à taper.
+
+---
+
+## RÈGLE DE DÉMARRAGE (onboarding automatique)
+
+**Au tout premier démarrage**, si `context/CONTEXT.md` contient encore le modèle vierge (marqueurs `[...]`), Claude DOIT, dès le premier message de l'apprenant, lancer automatiquement la commande `/demarrer` : accueillir en français, poser les questions une par une, puis **enregistrer tout lui-même** (CONTEXT.md, section « Qui je suis » et préférences de ce fichier, `git init` si besoin + premier commit). **L'apprenant ne tape aucune commande git, env ou terminal.** Une fois le contexte rempli, cette règle ne se redéclenche plus.
 
 ---
 
@@ -264,10 +267,10 @@ D'autres commandes de dev sont disponibles dans `.claude/commands/` (code-review
 
 ## Getting Started
 
-1. Remplis `context/CONTEXT.md` et les sections « Qui je suis » / « Comment tu dois m'aider » ci-dessus.
-2. Copie `.env.example` en `.env` et mets tes propres clés (voir README.md).
-3. Lance `/prime` au début de chaque session pour charger le contexte.
-4. (Optionnel) Installe les plugins complets : voir `PLUGINS.md`.
+1. **Premier démarrage** : écris juste « bonjour ». Claude lance l'onboarding (`/demarrer`), te pose les questions, et enregistre tout seul ta configuration. Tu ne tapes aucune commande.
+2. **Les sessions suivantes** : tape `/prime` pour charger ton contexte, puis `/nouveau-projet` pour démarrer un projet (ou `/reprendre` pour continuer).
+3. **Les clés API** : inutiles au début. Quand un projet en a besoin, Claude les gère via `/ajouter-cle` et `/generer-env` (jamais à écrire à la main).
+4. **(Optionnel)** Installe les plugins complets : voir `PLUGINS.md`.
 
 ---
 

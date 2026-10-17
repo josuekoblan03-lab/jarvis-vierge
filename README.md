@@ -13,19 +13,13 @@ Un workspace Claude Code prêt à l'emploi : agents spécialisés, skills de mé
 
 ---
 
-## Démarrage en 3 étapes
+## Démarrage : tu n'as rien à configurer
 
-1. **Tes clés.** Copie `.env.example` en `.env` et remplis tes propres valeurs (voir les commentaires dans le fichier). Le `.env` n'est jamais commité.
-   ```
-   cp .env.example .env
-   ```
-   (Tu peux laisser vides les clés que tu n'utilises pas encore. Les serveurs MCP qui en ont besoin ne se connecteront simplement pas tant que la clé est absente.)
+1. **Dézippe** ce dossier et **ouvre-le dans Claude Code**.
+2. **Écris simplement « bonjour ».** Claude t'accueille, te pose quelques questions, puis **enregistre tout seul** ta configuration (ton profil, tes préférences, le suivi git). Tu ne tapes aucune commande.
+3. C'est prêt. Pour créer ton premier projet : `/nouveau-projet`. Pour reprendre plus tard : `/reprendre`.
 
-2. **Ton contexte.** Ouvre `CLAUDE.md`, remplis les sections « Qui je suis » et « Comment tu dois m'aider ». Puis remplis `context/CONTEXT.md`.
-
-3. **Lance Claude Code** dans ce dossier et tape `/prime`. Claude charge ton contexte et confirme qu'il est prêt.
-
-À partir de là, pour créer un projet : `/nouveau-projet`. Pour reprendre un projet existant : `/reprendre`.
+> **Les clés API** (Supabase, GitHub…) sont inutiles au début. Quand un projet en aura besoin, Claude s'en occupe via `/ajouter-cle` et `/generer-env` ; tu n'écris jamais de clé à la main. Le fichier `.env.example` liste seulement les noms des variables, pour information.
 
 ---
 
