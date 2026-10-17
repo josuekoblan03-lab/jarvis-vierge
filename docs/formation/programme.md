@@ -1,7 +1,8 @@
 # Programme de formation — Développer des apps web avec Claude Code
 
 > 16 séances · 4 par semaine · 1 mois · présentiel 2 h
-> Fil rouge : l'apprenant construit SA propre app web (Next.js + Supabase + Vercel) du début à la fin, en utilisant toute la méthode de travail du formateur.
+> Fil rouge : l'apprenant construit **Faya**, une boutique de vêtements en ligne avec assistant de style IA et paiement GeniusPay (Next.js + Supabase + GeniusPay + Vercel), du début à la fin, en utilisant toute la méthode de travail du formateur.
+> Détail complet du projet : voir `projet-fil-rouge-faya.md`.
 
 ---
 
@@ -65,18 +66,18 @@ Le **Jarvis Vierge** (ce workspace). Installé en séance 1, il contient déjà 
 | # | Titre | Concept clé | Résultat concret |
 |---|---|---|---|
 | S9 | MCP en pratique | brancher Supabase + navigateur, `.env`, coffre | App connectée à une vraie base |
-| S10 | Base de données | schéma, CRUD, requêtes | Données réelles lues/écrites |
-| S11 | Authentification | login, sessions, protection des routes | App avec comptes utilisateurs |
+| S10 | Base de données | schéma, CRUD, requêtes | Catalogue produits + panier sur vraie base |
+| S11 | Authentification | login, sessions, protection des routes | Comptes clients + rôle admin + isolation des données |
 | S12 | Économie Pro et continuité avancée | tenir les quotas, sessions longues vs neuves | L'apprenant optimise sa conso |
 
 ### Semaine 4 — Niveau pro et sécurité
 
 | # | Titre | Concept clé | Résultat concret |
 |---|---|---|---|
-| S13 | Agents et revue de code | sous-agents, code-reviewer, debug systématique | Revue de l'app, bugs corrigés |
-| S14 | Hooks et garde-fous | protection .env, formatage auto, scope-guard | App protégée, qualité automatique |
-| S15 | Déploiement | Vercel, variables d'env en prod, previews | App en ligne |
-| S16 | Tester la sécurité + démo finale | pentest autorisé de sa propre app, bilan | App auditée, démo, autonomie |
+| S13 | Agents, revue + assistant IA | sous-agents, code-reviewer, debug ; assistant de style IA | Revue faite + assistant de style IA branché |
+| S14 | Hooks et garde-fous | protection .env, formatage auto, scope-guard | Clés (GeniusPay/Supabase) protégées, qualité auto |
+| S15 | Déploiement + paiement | Vercel, env en prod ; paiement GeniusPay (test) | Boutique en ligne avec tunnel de paiement |
+| S16 | Tester la sécurité + démo finale | pentest autorisé de sa propre app, bilan | Faya auditée, démo, autonomie |
 
 ---
 
@@ -85,12 +86,9 @@ Le **Jarvis Vierge** (ce workspace). Installé en séance 1, il contient déjà 
 - **Continue** : à chaque séance, l'apprenant montre qu'il reprend seul via `/reprendre` et qu'il a fait son devoir.
 - **Finale (S16)** : l'app est en ligne, l'apprenant fait une démo de 10 min et explique sa méthode de travail avec Claude Code.
 
-## Idées d'app de secours (si l'apprenant n'a pas d'idée en S2)
+## Le projet fil rouge : Faya
 
-Critère : faisable en ~10 séances, avec base de données + login.
-1. **Gestionnaire de tâches partagé** (todo + équipes + échéances).
-2. **Suivi de dépenses** (catégories, budgets, graphiques).
-3. **Mini-réseau d'entraide étudiant** (annonces, messages, profils).
+L'app construite tout au long de la formation est **Faya**, une boutique de vêtements en ligne avec assistant de style IA et paiement GeniusPay. Le concept, le périmètre MVP, le modèle de données et le branchement feature par séance sont détaillés dans **`projet-fil-rouge-faya.md`**. En S2, on écrit sa spec ensemble avec l'apprenant.
 
 ## Fichiers de ce dossier
 
