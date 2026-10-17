@@ -1,97 +1,85 @@
 # Programme de formation — Développer des apps web avec Claude Code
 
-> 16 séances · 4 par semaine · 1 mois · présentiel 2 h
-> Fil rouge : l'apprenant construit **Faya**, une boutique de vêtements en ligne avec assistant de style IA et paiement GeniusPay (Next.js + Supabase + GeniusPay + Vercel), du début à la fin, en utilisant toute la méthode de travail du formateur.
+> 8 séances · 4 par semaine · 2 semaines · présentiel ~3 h · pour deux apprenants
+> Fil rouge : les apprenants construisent **Faya**, une boutique de vêtements en ligne avec assistant de style IA et paiement GeniusPay (Next.js + Supabase + GeniusPay + Vercel), du début à la fin, en utilisant toute la méthode de travail du formateur.
 > Détail complet du projet : voir `projet-fil-rouge-faya.md`.
+> Format intensif : chaque séance fusionne deux thèmes. Les fiches détaillées (`fiches-formateur/S1…S16.md`) et mémos (`memos/S1…S16.md`) restent la référence ; le formateur en couvre deux par séance.
 
 ---
 
 ## Pour qui
 
-- **Apprenant** : bases de code (HTML/CSS/JS, un peu Python), terminal et Git encore flous. Abonnement Claude **Pro** (quotas serrés, l'économie fait partie de l'apprentissage).
+- **Apprenants (deux)** : bases de code (HTML/CSS/JS, un peu Python), terminal et Git encore flous. Abonnement Claude **Pro** (quotas serrés, l'économie fait partie de l'apprentissage).
 - **Formateur** : a déjà construit de vraies apps avec Claude Code, transmet sa manière de travailler.
 
-## Objectif de fin de mois
+## Objectif de fin de formation
 
-Une **vraie app web déployée en ligne**, construite par l'apprenant, avec base de données et authentification. À la fin, il sait travailler seul avec Claude Code : cadrer, construire, brancher des services (MCP), faire relire par des agents, se protéger avec des hooks, déployer, et tester la sécurité de son app.
+Une **vraie app web déployée en ligne** (Faya), avec base de données, authentification et paiement. À la fin, les apprenants savent travailler seuls avec Claude Code : cadrer, construire, brancher des services (MCP), faire relire par des agents, se protéger avec des hooks, déployer, et tester la sécurité de leur app.
 
 ## Outil central
 
-Le **Jarvis Vierge** (ce workspace). Installé en séance 1, il contient déjà agents, skills, commandes, hooks et MCP. L'apprenant repart avec.
+Le **Jarvis Vierge** (ce workspace). Installé en séance 1, il contient déjà agents, skills, commandes, hooks et MCP. Les apprenants repartent avec.
 
 ---
 
 ## Méthode pédagogique (règles du formateur)
 
-1. **C'est l'apprenant qui tape les prompts.** Le formateur montre une fois, l'apprenant refait. Jamais l'inverse.
+1. **Ce sont les apprenants qui tapent les prompts.** Le formateur montre une fois, chaque apprenant refait. Jamais l'inverse.
 2. **Toujours partir du « pourquoi ».** Avant chaque outil : quel problème il résout. Pas d'outil pour l'outil.
-3. **Démo sur du vrai.** Le formateur illustre avec ses propres projets réels quand c'est pertinent, puis l'apprenant applique sur son app.
-4. **Un concept par séance, ancré dans le projet.** La notion arrive quand le projet en a besoin.
-5. **Économie Pro en continu.** À chaque séance, un réflexe d'économie de quota (Sonnet par défaut, `/clear`, sessions courtes, continuité par fichiers).
-6. **Fin de séance = checkpoint.** `PROGRESS.md` à jour, `NEXT_SESSION.md` régénéré, devoir noté. L'apprenant doit pouvoir reprendre seul.
+3. **Démo sur du vrai.** Le formateur illustre avec ses propres projets réels quand c'est pertinent, puis les apprenants appliquent sur Faya.
+4. **Un bloc de concepts par séance, ancré dans le projet.** La notion arrive quand le projet en a besoin.
+5. **Économie Pro en continu.** Réflexe d'économie de quota à chaque séance (Sonnet par défaut, `/clear`, sessions courtes, continuité par fichiers).
+6. **Fin de séance = checkpoint.** `PROGRESS.md` à jour, `NEXT_SESSION.md` régénéré, travail noté. Les apprenants doivent pouvoir reprendre seuls.
 
-## Structure type d'une séance (2 h)
+> Deux apprenants : privilégier le binôme sur un même projet Faya (l'un pilote, l'autre vérifie et commente, on alterne), ou deux instances de Faya en parallèle si chacun a sa machine. Le formateur arbitre selon l'équipement.
+
+## Structure type d'une séance (~3 h)
 
 | Durée | Phase |
 |---|---|
-| 10 min | Retour sur le devoir de la séance précédente |
-| 25 min | Concept du jour + démo live |
-| 1 h 15 | Pratique sur l'app de l'apprenant (formateur en copilote) |
-| 10 min | Récap + checkpoint (PROGRESS/NEXT_SESSION) + devoir |
+| 15 min | Retour sur le travail de la séance précédente |
+| 40 min | Concepts du jour (deux thèmes) + démonstrations |
+| 1 h 45 | Pratique sur Faya (formateur en copilote, les apprenants alternent) |
+| 20 min | Récapitulatif + checkpoint (PROGRESS/NEXT_SESSION) + travail à préparer |
 
 ---
 
-## Vue d'ensemble des 16 séances
+## Vue d'ensemble des 8 séances
 
-### Semaine 1 — Fondations et méthode
+### Semaine 1 — Fondations, méthode et interface
 
-| # | Titre | Concept clé | Résultat concret |
+| # | Thèmes fusionnés | Concepts clés | Résultat concret |
 |---|---|---|---|
-| S1 | Prise en main | Installer le Jarvis Vierge, terminal, Git, 1re conversation | Environnement prêt, CONTEXT.md + CLAUDE.md remplis |
-| S2 | La méthode de travail | brainstorming → spec → plan → exécution | Idée d'app cadrée, spec écrite |
-| S3 | Continuité parfaite | PROGRESS / NEXT_SESSION / `/reprendre`, `/nouveau-projet` | Projet initialisé, squelette Next.js lancé |
-| S4 | Lire et piloter du code | Prompts efficaces, lire la sortie, corriger | Première page qui tourne en local |
+| **Séance 1** | Prise en main + Méthode (S1+S2) | Jarvis, terminal, Git, 1re conversation ; brainstorming → spec | Environnement prêt, contexte rempli, spec de Faya écrite |
+| **Séance 2** | Continuité + Piloter le code (S3+S4) | `/nouveau-projet`, PROGRESS/NEXT_SESSION/`/reprendre` ; prompts, lire la sortie | Projet initialisé, squelette Next.js, première page de la boutique |
+| **Séance 3** | Vocabulaire + Design (S5+S6) | MCP, agents, skills, hooks, commandes ; design-first avec Claude Design | Vitrine maquettée dans Claude Design puis transposée en code |
+| **Séance 4** | Responsive/a11y + Outils perso (S7+S8) | mobile-first, accessibilité ; créer une commande/skill | Catalogue responsive et accessible, 1 commande perso |
 
-### Semaine 2 — Construire l'interface
+### Semaine 2 — Données, services, mise en ligne et sécurité
 
-| # | Titre | Concept clé | Résultat concret |
+| # | Thèmes fusionnés | Concepts clés | Résultat concret |
 |---|---|---|---|
-| S5 | C'est quoi tout ça ? | MCP, agent, skill, plugin, hook, commande (le vocabulaire) | L'apprenant sait ce que chaque brique fait |
-| S6 | Design avec Claude Design | maquetter dans Claude Design, puis transposer en code | Page principale maquettée + codée fidèle |
-| S7 | Responsive et accessibilité | mobile, a11y, agent web-accessibility-checker | App utilisable mobile + accessible |
-| S8 | Commandes et skills perso | créer une commande, invoquer une skill | 1 commande perso créée |
+| **Séance 5** | MCP + Base de données (S9+S10) | brancher Supabase, `.env`, coffre ; schéma, CRUD | Catalogue et panier sur vraie base de données |
+| **Séance 6** | Auth + Économie/continuité (S11+S12) | comptes, rôles, isolation (RLS) ; tenir les quotas | Comptes clients + admin, données isolées, conso maîtrisée |
+| **Séance 7** | Revue + Assistant IA + Garde-fous (S13+S14) | agents, revue, debug ; assistant de style IA ; hooks | App relue, assistant IA branché, clés protégées |
+| **Séance 8** | Déploiement + Paiement + Sécurité (S15+S16) | Vercel, env prod ; paiement GeniusPay ; audit (cadre autorisé) | Boutique en ligne, paiement en test, auditée, démo finale |
 
-### Semaine 3 — Brancher le monde extérieur
-
-| # | Titre | Concept clé | Résultat concret |
-|---|---|---|---|
-| S9 | MCP en pratique | brancher Supabase + navigateur, `.env`, coffre | App connectée à une vraie base |
-| S10 | Base de données | schéma, CRUD, requêtes | Catalogue produits + panier sur vraie base |
-| S11 | Authentification | login, sessions, protection des routes | Comptes clients + rôle admin + isolation des données |
-| S12 | Économie Pro et continuité avancée | tenir les quotas, sessions longues vs neuves | L'apprenant optimise sa conso |
-
-### Semaine 4 — Niveau pro et sécurité
-
-| # | Titre | Concept clé | Résultat concret |
-|---|---|---|---|
-| S13 | Agents, revue + assistant IA | sous-agents, code-reviewer, debug ; assistant de style IA | Revue faite + assistant de style IA branché |
-| S14 | Hooks et garde-fous | protection .env, formatage auto, scope-guard | Clés (GeniusPay/Supabase) protégées, qualité auto |
-| S15 | Déploiement + paiement | Vercel, env en prod ; paiement GeniusPay (test) | Boutique en ligne avec tunnel de paiement |
-| S16 | Tester la sécurité + démo finale | pentest autorisé de sa propre app, bilan | Faya auditée, démo, autonomie |
+> Correspondance avec les fiches détaillées : Séance 1 = S1+S2, Séance 2 = S3+S4, Séance 3 = S5+S6, Séance 4 = S7+S8, Séance 5 = S9+S10, Séance 6 = S11+S12, Séance 7 = S13+S14, Séance 8 = S15+S16.
 
 ---
 
 ## Évaluation
 
-- **Continue** : à chaque séance, l'apprenant montre qu'il reprend seul via `/reprendre` et qu'il a fait son devoir.
-- **Finale (S16)** : l'app est en ligne, l'apprenant fait une démo de 10 min et explique sa méthode de travail avec Claude Code.
+- **Continue** : à chaque séance, chaque apprenant montre qu'il reprend seul le projet (via `/reprendre`) et qu'il a préparé le travail demandé.
+- **Finale (Séance 8)** : Faya est en ligne ; chaque apprenant fait une courte démonstration et explique sa méthode de travail avec Claude Code.
 
 ## Le projet fil rouge : Faya
 
-L'app construite tout au long de la formation est **Faya**, une boutique de vêtements en ligne avec assistant de style IA et paiement GeniusPay. Le concept, le périmètre MVP, le modèle de données et le branchement feature par séance sont détaillés dans **`projet-fil-rouge-faya.md`**. En S2, on écrit sa spec ensemble avec l'apprenant.
+L'app construite tout au long de la formation est **Faya**, une boutique de vêtements en ligne avec assistant de style IA et paiement GeniusPay. Le concept, le périmètre MVP, le modèle de données et le branchement feature par séance sont détaillés dans **`projet-fil-rouge-faya.md`**. En séance 1, on écrit sa spec avec les apprenants.
 
 ## Fichiers de ce dossier
 
-- `programme.md` — ce fichier.
-- `fiches-formateur/SXX.md` — le déroulé minute par minute de chaque séance (pour le formateur).
-- `memos/SXX.md` — la fiche mémo que l'apprenant garde (concepts, commandes, prompts types).
+- `programme.md` — ce fichier (plan 2 semaines / 8 séances).
+- `projet-fil-rouge-faya.md` — le projet construit.
+- `fiches-formateur/S1…S16.md` — le déroulé détaillé par thème (2 par séance).
+- `memos/S1…S16.md` — la fiche mémo par thème que les apprenants gardent.
